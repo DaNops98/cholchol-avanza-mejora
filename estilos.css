@@ -1,0 +1,352 @@
+/* =========================================================
+   CHOL CHOL AVANZA — PROPUESTA DE MEJORA
+   Sistema de diseño: paleta inspirada en el paisaje de la
+   Araucanía (cerros, río Cholchol) y en la trapelacucha
+   mapuche instalada en el frontis municipal.
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap");
+
+:root {
+  --verde-profundo: #16281F;
+  --verde-araucania: #1F3A2E;
+  --tierra: #8B5E34;
+  --ocre-trigo: #C9A227;
+  --rio: #4C6B77;
+  --crema: #F6F1E4;
+  --marfil: #FFFDF8;
+  --tinta: #23241F;
+  --borde: #E1D9C4;
+
+  --fuente-display: "Bitter", Georgia, serif;
+  --fuente-texto: "Work Sans", "Segoe UI", sans-serif;
+  --fuente-utilitaria: "JetBrains Mono", monospace;
+
+  --radio: 10px;
+  --sombra: 0 10px 30px rgba(22, 40, 31, 0.12);
+  --transicion: 180ms ease-in-out;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--crema);
+  color: var(--tinta);
+  font-family: var(--fuente-texto);
+  line-height: 1.55;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--rio); }
+a:hover { color: var(--verde-araucania); }
+
+h1, h2, h3 { font-family: var(--fuente-display); color: var(--verde-profundo); margin: 0 0 .5rem; line-height: 1.2; }
+h1 { font-size: clamp(2.1rem, 4.5vw, 3.1rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h3 { font-size: 1.15rem; }
+
+.eyebrow {
+  font-family: var(--fuente-utilitaria);
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--tierra);
+}
+
+.contenedor { width: min(1180px, 92%); margin-inline: auto; }
+
+/* Foco visible en todo el sitio (accesibilidad real, a diferencia del sitio original) */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid var(--ocre-trigo);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--ocre-trigo); color: var(--verde-profundo);
+  padding: .7rem 1.1rem; z-index: 1000; font-weight: 600;
+}
+.skip-link:focus { left: 0; }
+
+/* ---------- Aviso de propuesta académica ---------- */
+.aviso-academico {
+  background: var(--verde-profundo);
+  color: var(--crema);
+  text-align: center;
+  font-size: .85rem;
+  padding: .55rem 1rem;
+}
+.aviso-academico a { color: var(--ocre-trigo); }
+
+/* ---------- Barra utilitaria ---------- */
+.barra-utilitaria {
+  background: var(--tierra);
+  color: var(--marfil);
+}
+.barra-utilitaria .contenedor {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  padding-block: .4rem;
+  flex-wrap: wrap;
+  font-size: .8rem;
+}
+.barra-utilitaria a { color: var(--marfil); text-decoration: none; }
+.barra-utilitaria a:hover { color: var(--ocre-trigo); }
+
+/* ---------- Encabezado ---------- */
+.encabezado {
+  background: var(--verde-araucania);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.barra-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: .85rem;
+  flex-wrap: wrap;
+}
+
+.marca { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: #fff; }
+.marca img { width: 40px; height: 40px; }
+.marca .nombre-comuna { font-family: var(--fuente-display); font-weight: 700; font-size: 1.05rem; line-height: 1.1; }
+.marca .nombre-comuna small { display: block; font-family: var(--fuente-texto); font-weight: 400; font-size: .68rem; color: var(--ocre-trigo); letter-spacing: .04em; }
+
+.boton-menu-movil {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.5);
+  color: #fff;
+  padding: .45rem .8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.menu-principal { list-style: none; display: flex; gap: 1.4rem; margin: 0; padding: 0; flex-wrap: wrap; }
+.menu-principal a {
+  color: rgba(255,255,255,.88);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: .95rem;
+  padding-bottom: .2rem;
+  border-bottom: 2px solid transparent;
+}
+.menu-principal a:hover, .menu-principal a[aria-current="page"] {
+  color: #fff;
+  border-bottom-color: var(--ocre-trigo);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero .fecha-actualizacion {
+  font-family: var(--fuente-utilitaria);
+  font-size: .75rem;
+  color: var(--tierra);
+  margin-bottom: .6rem;
+}
+
+.hero p.parrafo-intro { font-size: 1.05rem; color: #45483F; max-width: 46ch; }
+
+.acciones-hero { display: flex; gap: .9rem; margin-top: 1.6rem; flex-wrap: wrap; }
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .8rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-family: var(--fuente-texto);
+  font-size: .95rem;
+}
+
+.boton-primario { background: var(--verde-araucania); color: #fff; }
+.boton-primario:hover { background: var(--verde-profundo); color: #fff; }
+
+.boton-secundario { background: transparent; border-color: var(--verde-araucania); color: var(--verde-araucania); }
+.boton-secundario:hover { background: var(--verde-araucania); color: #fff; }
+
+.hero .ilustracion { border-radius: var(--radio); overflow: hidden; box-shadow: var(--sombra); }
+
+/* ---------- Trámites destacados ---------- */
+.seccion { padding-block: clamp(2rem, 5vw, 3.5rem); }
+.seccion-alterna { background: var(--marfil); border-top: 1px solid var(--borde); border-bottom: 1px solid var(--borde); }
+
+.grilla-tramites {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+.tarjeta-tramite {
+  background: var(--marfil);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 1.4rem;
+  text-decoration: none;
+  color: var(--tinta);
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.tarjeta-tramite:hover, .tarjeta-tramite:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra);
+}
+
+.tarjeta-tramite .icono-tramite {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--crema);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--verde-araucania);
+  font-weight: 700;
+  font-family: var(--fuente-display);
+}
+
+.tarjeta-tramite h3 { margin: 0; font-size: 1rem; }
+.tarjeta-tramite p { margin: 0; font-size: .85rem; color: #5C5F52; flex-grow: 1; }
+.tarjeta-tramite .enlace-tramite { font-size: .85rem; font-weight: 600; color: var(--rio); }
+
+/* ---------- Noticia destacada ---------- */
+.tarjeta-noticia {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 2rem;
+  align-items: center;
+  background: var(--marfil);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 1.75rem;
+  box-shadow: var(--sombra);
+}
+
+.tarjeta-noticia .imagen-noticia {
+  border-radius: var(--radio);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+/* ---------- Institucional ---------- */
+.grilla-institucional { display: grid; grid-template-columns: 1fr 1.4fr; gap: 2.5rem; align-items: start; }
+
+.tarjeta-alcalde { background: var(--marfil); border: 1px solid var(--borde); border-radius: var(--radio); padding: 1.5rem; text-align: center; }
+.tarjeta-alcalde .foto-marcador {
+  width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 1rem;
+  background: var(--verde-araucania); color: var(--ocre-trigo);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--fuente-display); font-size: 1.6rem; font-weight: 700;
+}
+
+.lista-concejo { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: .5rem 1.5rem; }
+.lista-concejo li { padding: .5rem 0; border-bottom: 1px solid var(--borde); font-size: .92rem; }
+
+/* ---------- Contacto ---------- */
+.grilla-contacto { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+.tarjeta-contacto-dato {
+  background: var(--marfil);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.tarjeta-contacto-dato .icono-contacto {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--crema); color: var(--verde-araucania);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ---------- Franja final ---------- */
+.franja-final {
+  background: var(--verde-profundo);
+  color: var(--crema);
+  text-align: center;
+  padding: clamp(2rem, 5vw, 3rem);
+  border-radius: var(--radio);
+}
+.franja-final h2 { color: #fff; }
+
+/* ---------- Footer ---------- */
+.pie {
+  background: var(--verde-profundo);
+  color: rgba(246,241,228,.85);
+  padding-block: 2.5rem 1.5rem;
+  margin-top: 3rem;
+}
+.pie .contenedor { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 2rem; }
+.pie h3 { color: #fff; font-size: 1rem; }
+.pie a { color: rgba(246,241,228,.85); text-decoration: none; }
+.pie a:hover { color: var(--ocre-trigo); }
+.pie ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .5rem; font-size: .9rem; }
+.pie-linea-final {
+  border-top: 1px solid rgba(246,241,228,.15);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: .78rem;
+  text-align: center;
+  color: rgba(246,241,228,.6);
+}
+
+/* ---------- Motivo decorativo (signature element) ---------- */
+.divisor-trapelacucha {
+  height: 14px;
+  background-image: radial-gradient(circle, var(--ocre-trigo) 2.5px, transparent 2.6px);
+  background-size: 28px 14px;
+  background-position: center;
+  opacity: .55;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero .ilustracion { order: -1; }
+  .grilla-tramites { grid-template-columns: repeat(2, 1fr); }
+  .tarjeta-noticia { grid-template-columns: 1fr; }
+  .grilla-institucional { grid-template-columns: 1fr; }
+  .grilla-contacto { grid-template-columns: 1fr; }
+  .pie .contenedor { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+  .boton-menu-movil { display: inline-flex; align-items: center; gap: .4rem; }
+  .menu-principal {
+    flex-basis: 100%;
+    display: none;
+    flex-direction: column;
+    gap: .3rem;
+    padding-top: .6rem;
+  }
+  .menu-principal.abierto { display: flex; }
+  .barra-utilitaria .contenedor { justify-content: center; text-align: center; }
+}
+
+@media (max-width: 560px) {
+  .grilla-tramites { grid-template-columns: 1fr; }
+  .lista-concejo { grid-template-columns: 1fr; }
+}

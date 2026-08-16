@@ -1,0 +1,50 @@
+<svg viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="heroTitulo">
+  <title id="heroTitulo">Ilustración del río y el puente de Chol Chol, con un motivo geométrico inspirado en la trapelacucha mapuche</title>
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EFE6C8"/>
+      <stop offset="100%" stop-color="#F6F1E4"/>
+    </linearGradient>
+    <linearGradient id="rio" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5D818C"/>
+      <stop offset="100%" stop-color="#3C5760"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="640" fill="url(#cielo)"/>
+
+  <!-- Cerros -->
+  <path d="M0 300 Q120 240 260 290 T520 270 T640 300 V640 H0 Z" fill="#2C4A38"/>
+  <path d="M0 340 Q160 300 320 340 T640 330 V640 H0 Z" fill="#1F3A2E"/>
+
+  <!-- Río -->
+  <path d="M0 430 C120 410 180 460 320 440 C460 420 520 470 640 445 V640 H0 Z" fill="url(#rio)"/>
+
+  <!-- Puente -->
+  <g stroke="#F6F1E4" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M140 420 Q320 360 500 420"/>
+    <line x1="170" y1="426" x2="170" y2="452"/>
+    <line x1="230" y1="404" x2="230" y2="452"/>
+    <line x1="290" y1="392" x2="290" y2="452"/>
+    <line x1="350" y1="392" x2="350" y2="452"/>
+    <line x1="410" y1="404" x2="410" y2="452"/>
+    <line x1="470" y1="426" x2="470" y2="452"/>
+  </g>
+
+  <!-- Motivo geométrico (trapelacucha estilizada) -->
+  <g transform="translate(320 160)" fill="none" stroke="#C9A227" stroke-width="4">
+    <circle r="70" />
+    <circle r="46" />
+    <g stroke-width="3">
+      <line x1="-70" y1="0" x2="-92" y2="0"/>
+      <line x1="70" y1="0" x2="92" y2="0"/>
+      <line x1="0" y1="-70" x2="0" y2="-92"/>
+      <line x1="0" y1="70" x2="0" y2="92"/>
+      <line x1="49" y1="-49" x2="65" y2="-65"/>
+      <line x1="-49" y1="-49" x2="-65" y2="-65"/>
+      <line x1="49" y1="49" x2="65" y2="65"/>
+      <line x1="-49" y1="49" x2="-65" y2="65"/>
+    </g>
+    <circle r="10" fill="#C9A227" stroke="none"/>
+  </g>
+</svg>

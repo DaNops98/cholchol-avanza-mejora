@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Municipalidad de Chol Chol — Chol Chol Avanza</title>
+  <meta name="description" content="Sitio web de la Ilustre Municipalidad de Chol Chol. Trámites en línea, transparencia, noticias y contacto. Horario de atención: lunes a viernes, 08:30 a 14:00 horas.">
+  <link rel="icon" href="assets/isotipo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <p class="aviso-academico">
+    Propuesta de mejora académica del sitio <a href="https://municholchol.cl" target="_blank" rel="noopener">municholchol.cl</a> — no es un sitio oficial de la Municipalidad de Chol Chol.
+  </p>
+
+  <div class="barra-utilitaria">
+    <div class="contenedor">
+      <a href="https://www.portaltransparencia.cl/PortalPdT/directorio-de-organismos-regulados/?org=MU045" target="_blank" rel="noopener">Transparencia activa</a>
+      <a href="https://www.leylobby.gob.cl/instituciones/MU045" target="_blank" rel="noopener">Ley del Lobby</a>
+      <a href="https://www.portaltransparencia.cl/PortalPdT/ingreso-sai-v2?idOrg=498" target="_blank" rel="noopener">Solicitar información</a>
+    </div>
+  </div>
+
+  <header class="encabezado">
+    <nav class="contenedor barra-nav" aria-label="Navegación principal">
+      <a class="marca" href="index.html">
+        <img src="assets/isotipo.svg" alt="">
+        <span class="nombre-comuna">Municipalidad de Chol Chol<small>Región de La Araucanía · Chile</small></span>
+      </a>
+      <button id="botonMenuMovil" class="boton-menu-movil" type="button" aria-expanded="false" aria-controls="menuPrincipal">
+        Menú ☰
+      </button>
+      <ul id="menuPrincipal" class="menu-principal">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="#municipio">Municipio</a></li>
+        <li><a href="#tramites">Trámites</a></li>
+        <li><a href="#patrimonio">Patrimonio</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+    <section class="contenedor hero" aria-labelledby="tituloHero">
+      <div>
+        <p class="eyebrow">Ilustre Municipalidad de Chol Chol</p>
+        <h1 id="tituloHero">Chol Chol avanza</h1>
+        <p class="parrafo-intro">
+          Servicios municipales, trámites en línea e información pública para los vecinos y vecinas
+          de la comuna, en un solo lugar, fácil de encontrar y de usar.
+        </p>
+        <div class="acciones-hero">
+          <a class="boton boton-primario" href="#tramites">Ver trámites en línea</a>
+          <a class="boton boton-secundario" href="#contacto">Horario y contacto</a>
+        </div>
+      </div>
+      <div class="ilustracion">
+        <img src="assets/hero-rio-puente.svg" alt="Ilustración del puente sobre el río Cholchol">
+      </div>
+    </section>
+
+    <div class="divisor-trapelacucha" role="presentation"></div>
+
+    <section id="tramites" class="seccion seccion-alterna" aria-labelledby="tituloTramites">
+      <div class="contenedor">
+        <p class="eyebrow">Lo más buscado</p>
+        <h2 id="tituloTramites">Trámites en línea</h2>
+        <div class="grilla-tramites">
+          <a class="tarjeta-tramite" href="https://cholcholpagos.insico.cl/PermisoCirculacion" target="_blank" rel="noopener">
+            <span class="icono-tramite" aria-hidden="true">P</span>
+            <h3>Permiso de circulación</h3>
+            <p>Consulta y paga tu permiso de circulación de forma segura.</p>
+            <span class="enlace-tramite">Pagar en línea →</span>
+          </a>
+          <a class="tarjeta-tramite" href="https://www.portaltransparencia.cl/PortalPdT/ingreso-sai-v2?idOrg=498" target="_blank" rel="noopener">
+            <span class="icono-tramite" aria-hidden="true">i</span>
+            <h3>Solicitar información</h3>
+            <p>Ingresa una solicitud de información pública (Ley de Transparencia).</p>
+            <span class="enlace-tramite">Ir al portal →</span>
+          </a>
+          <a class="tarjeta-tramite" href="https://www.portaltransparencia.cl/PortalPdT/directorio-de-organismos-regulados/?org=MU045" target="_blank" rel="noopener">
+            <span class="icono-tramite" aria-hidden="true">T</span>
+            <h3>Transparencia activa</h3>
+            <p>Revisa remuneraciones, contrataciones y actos municipales.</p>
+            <span class="enlace-tramite">Ver directorio →</span>
+          </a>
+          <a class="tarjeta-tramite" href="#contacto">
+            <span class="icono-tramite" aria-hidden="true">C</span>
+            <h3>Oficina de partes</h3>
+            <p>Presenta documentos o consultas directamente a la municipalidad.</p>
+            <span class="enlace-tramite">Ver datos de contacto →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="tituloNoticia">
+      <div class="contenedor">
+        <p class="eyebrow">Noticia destacada</p>
+        <h2 id="tituloNoticia" class="visually-hidden" style="font-size:1.4rem;">Apoyo municipal a la educación superior</h2>
+        <article class="tarjeta-noticia">
+          <div class="imagen-noticia" style="background:var(--verde-araucania); display:flex; align-items:center; justify-content:center;">
+            <span style="color:var(--ocre-trigo); font-family:var(--fuente-display); font-size:3rem; font-weight:700;">100</span>
+          </div>
+          <div>
+            <p class="eyebrow">Educación · 2025</p>
+            <h3 style="font-size:1.3rem;">100 jóvenes de Chol Chol son beneficiados con becas para sus estudios superiores</h3>
+            <p>
+              El municipio, a través de su Programa de Becas Municipales, benefició este año a 100
+              estudiantes de educación superior, reafirmando su compromiso con el acceso equitativo
+              a la educación técnico-profesional y universitaria.
+            </p>
+            <a href="https://municholchol.cl" target="_blank" rel="noopener" class="enlace-tramite">Leer la noticia completa en el sitio oficial →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="municipio" class="seccion seccion-alterna" aria-labelledby="tituloMunicipio">
+      <div class="contenedor grilla-institucional">
+        <div class="tarjeta-alcalde">
+          <div class="foto-marcador" aria-hidden="true">AL</div>
+          <p class="eyebrow">Alcalde</p>
+          <h3>Álvaro Labraña Opazo</h3>
+        </div>
+        <div>
+          <p class="eyebrow">Autoridades comunales</p>
+          <h2 id="tituloMunicipio">Concejo Municipal 2024–2028</h2>
+          <ul class="lista-concejo">
+            <li>Alejandra Nataly Mellico Contreras</li>
+            <li>Bernardita Viscarra Astudillo</li>
+            <li>Diego Millao Collio</li>
+            <li>Ismael Cayul Coñuenao</li>
+            <li>Andrés Navarrete Painemal</li>
+            <li>Gonzalo Tropa Huircalaf</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="patrimonio" class="seccion" aria-labelledby="tituloPatrimonio">
+      <div class="contenedor" style="max-width:70ch;">
+        <p class="eyebrow">Patrimonio e historia</p>
+        <h2 id="tituloPatrimonio">Un territorio con identidad propia</h2>
+        <p>
+          Chol Chol —del mapudungún, "lugar de cardos"— es una comuna de la provincia de Cautín, Región
+          de La Araucanía, creada en 2004 al segregarse de Nueva Imperial. Su historia está marcada por
+          la cultura mapuche, la llegada de misiones educativas a fines del siglo XIX y la lucha de sus
+          dirigentes sociales por convertirse en un territorio autónomo.
+        </p>
+        <a class="boton boton-secundario" href="https://municholchol.cl/municipio" target="_blank" rel="noopener">Conocer la historia completa</a>
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion seccion-alterna" aria-labelledby="tituloContacto">
+      <div class="contenedor">
+        <p class="eyebrow">Estamos para ayudarte</p>
+        <h2 id="tituloContacto">Contacto y horario de atención</h2>
+        <div class="grilla-contacto">
+          <div class="tarjeta-contacto-dato">
+            <span class="icono-contacto" aria-hidden="true">📍</span>
+            <div>
+              <h3>Dirección</h3>
+              <p>José Joaquín Pérez 449, Chol Chol, Región de La Araucanía.</p>
+            </div>
+          </div>
+          <div class="tarjeta-contacto-dato">
+            <span class="icono-contacto" aria-hidden="true">☎</span>
+            <div>
+              <h3>Teléfono</h3>
+              <p><a href="tel:+56452734200">+56 45 273 4200</a></p>
+            </div>
+          </div>
+          <div class="tarjeta-contacto-dato">
+            <span class="icono-contacto" aria-hidden="true">✉</span>
+            <div>
+              <h3>Oficina de partes</h3>
+              <p><a href="mailto:oficinadepartes@municholchol.cl">oficinadepartes@municholchol.cl</a></p>
+            </div>
+          </div>
+          <div class="tarjeta-contacto-dato">
+            <span class="icono-contacto" aria-hidden="true">🕒</span>
+            <div>
+              <h3>Horario de atención</h3>
+              <p>Lunes a viernes, de 08:30 a 14:00 horas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contenedor seccion">
+      <div class="franja-final">
+        <h2>Participa e infórmate</h2>
+        <p>Revisa las encuestas ciudadanas vigentes y súmate a los procesos de participación de la comuna.</p>
+        <a class="boton boton-primario" style="background:var(--ocre-trigo); color:var(--verde-profundo);" href="#tramites">Ver trámites disponibles</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div>
+        <h3>Municipalidad de Chol Chol</h3>
+        <p style="font-size:.88rem;">José Joaquín Pérez 449, Chol Chol, Región de La Araucanía, Chile.</p>
+      </div>
+      <div>
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#municipio">Municipio</a></li>
+          <li><a href="#tramites">Trámites</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Enlaces de transparencia</h3>
+        <ul>
+          <li><a href="https://www.portaltransparencia.cl/PortalPdT/directorio-de-organismos-regulados/?org=MU045" target="_blank" rel="noopener">Transparencia activa</a></li>
+          <li><a href="https://www.leylobby.gob.cl/instituciones/MU045" target="_blank" rel="noopener">Ley del Lobby</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="pie-linea-final">© <span id="anioActual"></span> Municipalidad de Chol Chol. Propuesta de mejora de uso académico, no oficial.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
